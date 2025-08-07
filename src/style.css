@@ -11,6 +11,7 @@
 .timer{
     display: flex;
     gap: 10px;
+    justify-content: space-evenly;
     align-items: center;  
 }
 .watchButton{
@@ -30,10 +31,11 @@
     background-color: red;
 }
 .timeTxt{
-     width: 300px;
-    height: 300px;
+    margin-bottom: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-     box-shadow: 6px 6px 16px aqua;
+    box-shadow: 6px 6px 16px aqua;
     font-size: 35px;
     color: aqua;
     display: flex;
@@ -41,6 +43,7 @@
     align-items: center;
 }
 .timerBox{
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;

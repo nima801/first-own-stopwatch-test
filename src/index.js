@@ -1,29 +1,52 @@
-import React from 'react';
+import React ,{useEffect,useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import Hello from "./Helo"
 import Timer from "./Timer";
 
 
-class Allin extends React.Component{
 
- constructor(){
-  super();
-  this.state = {
-    title : "Let's Use StopWatch"
+const Allin = ()=>{
+  let [isLight,setIsLight] = useState(false)
+  let handlesetIsLight = ()=>{
+    setIsLight(!isLight)
   }
+  let [txt , setTxt] = useState("Welcome to use DLmode")
 
- }
+  useEffect(()=>{
+    console.log("useEffect used");
+    return ()=>{
 
-  render(){
-    return(
-      <div className='main'>
-        <Hello title = {this.state.title}/>
-        <Timer/>
-      </div>
-    )
-  }
+    }
+  },[isLight])
+
+  return (
+    <div className='main' style={{background: isLight ? "white" : "black"}}>
+        <Hello txt={txt}/>
+        <Timer isLight={isLight} handlesetIsLight={handlesetIsLight} />
+    </div>
+  )
 
 }
+// class Allin extends React.Component{
+
+//  constructor(){
+//   super();
+//   this.state = {
+//     title : "Let's Use StopWatch"
+//   }
+
+//  }
+
+//   render(){
+//     return(
+//       <div className='main'>
+//         <Hello title = {this.state.title}/>
+//         <Timer/>
+//       </div>
+//     )
+//   }
+
+// }
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(<Allin/>)
