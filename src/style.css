@@ -1,0 +1,48 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: chocolate;
+}
+.timer{
+    display: flex;
+    gap: 10px;
+    align-items: center;  
+}
+.watchButton{
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.buttonStart{
+    background-color: green;
+}
+.buttonStop{
+    background-color: yellow;
+}
+.buttonReset{
+    background-color: red;
+}
+.timeTxt{
+     width: 300px;
+    height: 300px;
+    border-radius: 50%;
+     box-shadow: 6px 6px 16px aqua;
+    font-size: 35px;
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timerBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
